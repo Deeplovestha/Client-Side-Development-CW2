@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpeedRide - Login</title>
+    <link rel="stylesheet" href="login.css">
+    <!-- Add jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="login.js"></script>
+</head>
+<body>
+    
+               <!-- Login Form-->
+    <div class="login-container" id="login-container">
+        <img src="../logo.png" alt="SpeedRide Logo" class="logo">
+        <h2>Login to Your Account</h2>
+        
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="userBtn" name="email" placeholder="Enter your email" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="passBtn" name="password" placeholder="Enter your password" required>
+                <button type="button" class="toggle-password">Show</button>
+            </div>
+            
+            <button type="submit">Login</button>
+        </form>
+        
+        <div class="links">
+            <a href="/forgot-password">Forgot Password?</a> 
+            <a href="#" id="show-signup">Create Account</a>
+        </div>
+    </div>
+           
+              <!---Sign up -->
+    <div class="form-box" id="signup-form" style="display: none;">
+      <h1>Create Account</h1>
+      <input type="text" placeholder="First Name" id="fname">
+      <input type="text" placeholder="Last Name" id="lname">
+      <input type="email" placeholder="Email" id="newEmail">
+      <input type="password" placeholder="Password" id="newPass">
+      <input type="password" placeholder="Confirm Password" id="confirmPass">
+      <button id="signup-submit" href="login.html">Sign Up</button>
+      <button class="link-btn" id="show-login">Back to Login</button>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Booking</title>
+    <link rel="stylesheet" href="model.css">
+</head>
+<body>
+
+      <!-- Header -->
+  <header class="header">
+    <div class="logo">SpeedRide</div>
+    <nav>
+      <ul>
+       <li><a href="../index/index.html">Home</a></li>
+        <li><a href="../model/model.html">Models</a></li>
+        <li><a href="../about/about.html">About</a></li>
+        <li><a href="../contact/contact.html">Contact</a></li>
+        <li><a href="../booking/booking.html">Booking</a></li>
+        <!-- <li>
+          <button class="logout-btn" onclick="logout()">
+            <i class="fas fa-sign-out-alt"></i>
+            Logout
+          </button> -->
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+    <div class="logo-container">
+        <img src="logo.png" alt="Company Logo" class="logo">
+    </div>
+
+    <div class="booking-wrapper">
+        <div class="booking-container">
+            <h1>Book Your <span>Dream Bike</span></h1>
+            <form class="booking-form">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your Name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your Phone Number">
+
+                <label for="model">Bike Model</label>
+                <select id="model" name="model" required>
+                    <option value="">--Select a model--</option>
+                    <option value="KTM Duke 200">KTM Duke 200</option>
+                    <option value="Suzuki Gixxer SF">Suzuki Gixxer SF</option>
+                    <option value="Yamaha R15 V4">Yamaha R15 V4</option>
+                    <option value="Honda CB Hornet 160R">Honda CB Hornet 160R</option>
+                    <option value="Royal Enfield">Royal Enfield</option>
+                    <option value="Kawasaki Ninja">Kawasaki Ninja</option>
+                </select>
+
+                <label for="price">Price</label>
+                <input type="text" id="price" name="price" readonly>
+
+                <label for="message">Additional Notes</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+
+                <button type="submit">Submit Booking</button>
+            </form>
+        </div>
+        <div class="bike-model-container">
+            <img id="bike-image" src="" alt="Selected Bike Image">
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const modelDropdown = document.getElementById('model');
+            const priceInput = document.getElementById('price');
+            const bikeImage = document.getElementById('bike-image');
+            const bikeModelContainer = document.querySelector('.bike-model-container');
+
+            const bikeImageMap = {
+                'KTM Duke 200': 'bike2.jpg',
+                'Suzuki Gixxer SF': 'bike6.jpg',
+                'Yamaha R15 V4': 'bike1.jpg',
+                'Honda CB Hornet 160R': 'bike4.jpg',
+                'Royal Enfield': 'bike5.jpg',
+                'Kawasaki Ninja': 'bike3.jpg'
+            };
+            
+            const bikePriceMap = {
+                'KTM Duke 200': '£4500',
+                'Suzuki Gixxer SF': '£4900',
+                'Yamaha R15 V4': '£4200',
+                'Honda CB Hornet 160R': '£3500',
+                'Royal Enfield': '£3900',
+                'Kawasaki Ninja': '£3300'
+            };
+
+            function updateBikeInfo(model) {
+                if (model) {
+                    priceInput.value = bikePriceMap[model] || '';
+                    bikeImage.src = bikeImageMap[model] || '';
+                    bikeModelContainer.style.display = 'block';
+                    bikeImage.classList.add('float');
+                } else {
+                    priceInput.value = '';
+                    bikeImage.src = '';
+                    bikeModelContainer.style.display = 'none';
+                    bikeImage.classList.remove('float');
+                }
+            }
+
+            const urlModel = urlParams.get('model');
+            if (urlModel) {
+                modelDropdown.value = urlModel;
+                updateBikeInfo(urlModel);
+            }
+
+            modelDropdown.addEventListener('change', (e) => {
+                const selectedModel = e.target.value;
+                updateBikeInfo(selectedModel);
+            });
+            
+            if (!urlModel) {
+                bikeModelContainer.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

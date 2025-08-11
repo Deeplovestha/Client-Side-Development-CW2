@@ -1,0 +1,324 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #fff;
+  line-height: 1.6;
+  position: relative;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: crimson;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: crimson;
+}
+
+nav a[href="booking"] {
+    background: crimson;
+    padding: 8px 20px;
+    border-radius: 25px;
+    transition: all 0.3s;
+}
+
+nav a[href="booking"]:hover {
+    background: #e60000;
+    color: white !important;
+    transform: scale(1.05);
+}
+
+
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  padding-top: 80px;
+  scroll-margin-top: 80px;
+}
+
+.hero::before {
+  content: "";
+  background: url('fallback.jpg') center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;  /* Behind video */
+}
+
+.name{
+  color: #e60000;
+}
+
+.typing{
+  color: red;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.5);
+  position: fixed;
+}
+
+.hero-content {
+  color: white;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background: #ff4444;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #e60000;
+  transform: scale(1.05);
+}
+
+/* Models Section */
+.models {
+  padding: 80px 40px;
+  background: #111;
+  text-align: center;
+}
+
+.models h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.model-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.model {
+  background: #1c1c1c;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.model:hover {
+  transform: translateY(-5px);
+}
+
+.model img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.model h3 {
+  font-size: 22px;
+  color: crimson;
+  margin-bottom: 10px;
+}
+
+.model p {
+  color: #ccc;
+  font-size: 14px;
+}
+
+/* About Section */
+.about {
+  padding: 80px 40px;
+  background: #0d0d0d;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 36px;
+  color: crimson;
+  margin-bottom: 20px;
+}
+
+.about p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 18px;
+  color: #ddd;
+}
+
+/* Contact Section */
+.contact {
+  padding: 80px 40px;
+  background: #111;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  background: #222;
+  color: #fff;
+}
+
+button[type="submit"] {
+  background: crimson;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button[type="submit"]:hover {
+  background: #e60000;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  color: #aaa;
+  font-size: 14px;
+}
+
+
+
+/* Typing Animation Styles */
+.typed-cursor {
+  color: crimson;
+  font-weight: bold;
+  opacity: 1;
+  animation: blink 0.7s infinite;
+}
+
+/* @keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+} */
+
+/* Cookie Consent Banner Styles */
+.cookie-consent-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.cookie-consent-container.hidden {
+    transform: translateY(200px);
+}
+
+.cookie-consent-container p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.cookie-consent-container button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.cookie-consent-container button:hover {
+    background-color: #555;
+}
+
+.cookie-consent-container button:first-child {
+    background-color: #1f4068;
+    color: #fff;
+}

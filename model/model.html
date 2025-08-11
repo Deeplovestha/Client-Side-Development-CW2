@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bike Products</title>
+    <!-- <link rel="stylesheet" href="style.css"/> -->
+    <link rel="stylesheet" href="model.css"/>
+    
+</head>
+<body>
+
+       <!-- Header -->
+  <header class="header">
+    <div class="logo">SpeedRide</div>
+    <nav>
+      <ul>
+        <li><a href="../index/index.html">Home</a></li>
+        <li><a href="../model/model.html">Models</a></li>
+        <li><a href="../about/about.html">About</a></li>
+        <li><a href="../contact/contact.html">Contact</a></li>
+        <li><a href="../booking/booking.html">Booking</a></li>
+        <!-- <li>
+          <button class="logout-btn" onclick="logout()">
+            <i class="fas fa-sign-out-alt"></i>
+            Logout
+          </button> -->
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+    <section class="product-section" id="productSection">
+        <div class="product-marquee">
+            <marquee behavior="scroll" direction="left" scrollamount="5" scrolldelay="100" onmouseover="this.stop()" onmouseout="this.start()">
+                * Welcome to SpeedRide Bike Showroom, we are here with regorious model of your dream bike with top notch service!
+            </marquee>
+        </div>
+
+        <div class="row">
+
+            <div class="card" id="card1">
+                <div class="card-header">
+                    <h3>1. KTM Duke 200</h3>
+                </div>
+                <img src="bike2.jpg" alt="KTM Duke 200" />
+                <button class="view-details-btn" onclick="showDetails('card1')">View Details</button>
+            </div>
+            <div class="details-panel" id="details-card1" style="display: none;">
+                <div class="details-content">
+                    <img src="bike2.jpg" alt="KTM Duke 200" class="details-img" />
+                    <table class="details-table">
+                        <tbody>
+                            <tr><th>Engine</th><td>199.5 cc</td></tr>
+                            <tr><th>Power</th><td>~25 HP</td></tr>
+                            <tr><th>Gearbox</th><td>6-speed</td></tr>
+                            <tr><th>Mileage</th><td>~35 km/l</td></tr>
+                            <tr><th>Warranty</th><td>2 years / 20,000 km</td></tr>
+                            <tr><th>Special Features</th><td>LCD Digital Console, Dual-channel ABS, LED DRLs</td></tr>
+                            <tr><th>Price</th><td>£4500</td></tr>
+                        </tbody>
+                    </table>
+                    <button class="book-now-details-btn" onclick="bookNow('KTM Duke 200', '4500')">Book Now</button>
+                </div>
+            </div>
+
+            <div class="card" id="card2">
+                <div class="card-header">
+                    <h3>2. Suzuki Gixxer SF</h3>
+                </div>
+                <img src="bike6.jpg" alt="Suzuki Gixxer SF" />
+                <button class="view-details-btn" onclick="showDetails('card2')">View Details</button>
+            </div>
+            <div class="details-panel" id="details-card2" style="display: none;">
+                <div class="details-content">
+                    <img src="bike6.jpg" alt="Suzuki Gixxer SF" class="details-img" />
+                    <table class="details-table">
+                        <tbody>
+                            <tr><th>Engine</th><td>155 cc</td></tr>
+                            <tr><th>Power</th><td>~14 HP</td></tr>
+                            <tr><th>Gearbox</th><td>5-speed</td></tr>
+                            <tr><th>Mileage</th><td>~45 km/l</td></tr>
+                            <tr><th>Warranty</th><td>2 years / 30,000 km</td></tr>
+                            <tr><th>Special Features</th><td>Fully Digital Meter, Single-channel ABS, LED Headlight</td></tr>
+                            <tr><th>Price</th><td>£4900</td></tr>
+                        </tbody>
+                    </table>
+                    <button class="book-now-details-btn" onclick="bookNow('Suzuki Gixxer SF', '4900')">Book Now</button>
+                </div>
+            </div>
+
+            <div class="card" id="card3">
+                <div class="card-header">
+                    <h3>3. Yamaha R15 V4</h3>
+                </div>
+                <img src="bike1.jpg" alt="Yamaha R15 V4" />
+                <button class="view-details-btn" onclick="showDetails('card3')">View Details</button>
+            </div>
+            <div class="details-panel" id="details-card3" style="display: none;">
+                <div class="details-content">
+                    <img src="bike1.jpg" alt="Yamaha R15 V4" class="details-img" />
+                    <table class="details-table">
+                        <tbody>
+                            <tr><th>Engine</th><td>155 cc</td></tr>
+                            <tr><th>Power</th><td>~18.4 HP</td></tr>
+                            <tr><th>Gearbox</th><td>6-speed</td></tr>
+                            <tr><th>Mileage</th><td>~40 km/l</td></tr>
+                            <tr><th>Warranty</th><td>3 years / 30,000 km</td></tr>
+                            <tr><th>Special Features</th><td>Variable Valve Actuation, Traction Control, Quick Shifter (on some models)</td></tr>
+                            <tr><th>Price</th><td>£4200</td></tr>
+                        </tbody>
+                    </table>
+                    <button class="book-now-details-btn" onclick="bookNow('Yamaha R15 V4', '4200')">Book Now</button>
+                </div>
+            </div>
+
+            <div class="card" id="card4">
+                <div class="card-header">
+                    <h3>4. Honda CB Hornet 160R</h3>
+                </div>
+                <img src="bike4.jpg" alt="Honda CB Hornet 160R" />
+                <button class="view-details-btn" onclick="showDetails('card4')">View Details</button>
+            </div>
+            <div class="details-panel" id="details-card4" style="display: none;">
+                <div class="details-content">
+                    <img src="bike4.jpg" alt="Honda CB Hornet 160R" class="details-img" />
+                    <table class="details-table">
+                        <tbody>
+                            <tr><th>Engine</th><td>162.71 cc</td></tr>
+                            <tr><th>Power</th><td>~15 HP</td></tr>
+                            <tr><th>Gearbox</th><td>5-speed</td></tr>
+                            <tr><th>Mileage</th><td>~45 km/l</td></tr>
+                            <tr><th>Warranty</th><td>2 years / 20,000 km</td></tr>
+                            <tr><th>Special Features</th><td>Aggressive Styling, LED Headlamp, Digital Console</td></tr>
+                            <tr><th>Price</th><td>£3500</td></tr>
+                        </tbody>
+                    </table>
+                    <button class="book-now-details-btn" onclick="bookNow('Honda CB Hornet 160R', '3500')">Book Now</button>
+                </div>
+            </div>
+
+            <div class="card" id="card5">
+                <div class="card-header">
+                    <h3>5. Royal Enfield</h3>
+                </div>
+                <img src="bike5.jpg" alt="Royal Enfield" />
+                <button class="view-details-btn" onclick="showDetails('card5')">View Details</button>
+            </div>
+            <div class="details-panel" id="details-card5" style="display: none;">
+                <div class="details-content">
+                    <img src="bike5.jpg" alt="Royal Enfield" class="details-img" />
+                    <table class="details-table">
+                        <tbody>
+                            <tr><th>Engine</th><td>199.5 cc</td></tr>
+                            <tr><th>Power</th><td>~24.5 HP</td></tr>
+                            <tr><th>Gearbox</th><td>6-speed</td></tr>
+                            <tr><th>Mileage</th><td>~37 km/l</td></tr>
+                            <tr><th>Warranty</th><td>2 years / 20,000 km</td></tr>
+                            <tr><th>Special Features</th><td>Triple Spark DTS-i Engine, Perimeter Frame, Liquid Cooling</td></tr>
+                            <tr><th>Price</th><td>£3900</td></tr>
+                        </tbody>
+                    </table>
+                    <button class="book-now-details-btn" onclick="bookNow('Royal Enfield', '3900')">Book Now</button>
+                </div>
+            </div>
+
+            <div class="card" id="card6">
+                <div class="card-header">
+                    <h3>6. Kawasaki Ninja</h3>
+                </div>
+                <img src="bike3.jpg" alt="Kawasaki Ninja" />
+                <button class="view-details-btn" onclick="showDetails('card6')">View Details</button>
+            </div>
+            <div class="details-panel" id="details-card6" style="display: none;">
+                <div class="details-content">
+                    <img src="bike3.jpg" alt="Kawasaki Ninja" class="details-img" />
+                    <table class="details-table">
+                        <tbody>
+                            <tr><th>Engine</th><td>159.7 cc</td></tr>
+                            <tr><th>Power</th><td>~16.8 HP</td></tr>
+                            <tr><th>Gearbox</th><td>5-speed</td></tr>
+                            <tr><th>Mileage</th><td>~45 km/l</td></tr>
+                            <tr><th>Warranty</th><td>2 years / 20,000 km</td></tr>
+                            <tr><th>Special Features</th><td>Race-tuned Suspension, GTT (Glide Through Technology), Fully Digital Console</td></tr>
+                            <tr><th>Price</th><td>£3300</td></tr>
+                        </tbody>
+                    </table>
+                    <button class="book-now-details-btn" onclick="bookNow('Kawasaki Ninja', '3300')">Book Now</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="model.js"></script>
+</body>
+</html>
