@@ -123,9 +123,30 @@ h2:after {
   background-color: var(--primary);
 }
 
-.story-section, 
-.why-choose-us, 
-.team-section, 
+.story-section{
+  background-color: white;
+  padding: 40px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+} 
+
+.why-choose-us{
+  background-color: white;
+  padding: 40px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.team-section{
+  background-color: white;
+  padding: 40px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
 .promise-section {
   background-color: white;
   padding: 40px;

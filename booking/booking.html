@@ -20,12 +20,6 @@
         <li><a href="../about/about.html">About</a></li>
         <li><a href="../contact/contact.html">Contact</a></li>
         <li><a href="../booking/booking.html">Booking</a></li>
-        <!-- <li>
-          <button class="logout-btn" onclick="logout()">
-            <i class="fas fa-sign-out-alt"></i>
-            Logout
-          </button> -->
-        </li>
       </ul>
     </nav>
   </header>
@@ -33,7 +27,8 @@
     <div class="logo-container">
         <img src="../logo.png" alt="Company Logo" class="logo">
     </div>
-
+           
+         <!-- Booking Form-->
     <div class="booking-wrapper">
         <div class="booking-container">
             <h1>Book Your <span>Dream Bike</span></h1>
@@ -46,7 +41,8 @@
 
                 <label for="phone">Phone Number</label>
                 <input type="tel" id="phone" name="phone" placeholder="Enter your Phone Number">
-
+                    
+                <!-- MOdel List-->
                 <label for="model">Bike Model</label>
                 <select id="model" name="model" required>
                     <option value="">--Select a model--</option>
@@ -71,7 +67,8 @@
             <img id="bike-image" src="" alt="Selected Bike Image">
         </div>
     </div>
-
+     
+          <!--JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const urlParams = new URLSearchParams(window.location.search);
@@ -79,6 +76,7 @@
             const priceInput = document.getElementById('price');
             const bikeImage = document.getElementById('bike-image');
             const bikeModelContainer = document.querySelector('.bike-model-container');
+                  
 
             const bikeImageMap = {
                 'KTM Duke 200': 'bike2.jpg',
@@ -88,7 +86,8 @@
                 'Bajaj Pulsar NS200': 'bike5.jpg',
                 'TVS Apache RTR 160 4V': 'bike3.jpg'
             };
-            
+               
+           //Auto price filler//
             const bikePriceMap = {
                 'KTM Duke 200': '£4500',
                 'Suzuki Gixxer SF': '£4900',
